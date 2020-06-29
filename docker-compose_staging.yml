@@ -57,8 +57,8 @@ services:
         - "443:443"
       depends_on:
         - api
-      # volumes: 
-      #   - ./config/nginx/conf.d/:/etc/nginx/conf.d/
+      volumes: 
+        - saleor-media:/app/media
 
     db:
         image: postgres:11.1-alpine
